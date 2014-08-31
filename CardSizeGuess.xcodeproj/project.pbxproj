@@ -21,6 +21,10 @@
 		852452801977C3A700DDECB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 852452621977C3A700DDECB3 /* UIKit.framework */; };
 		852452881977C3A700DDECB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 852452861977C3A700DDECB3 /* InfoPlist.strings */; };
 		8524528A1977C3A700DDECB3 /* CardSizeGuessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 852452891977C3A700DDECB3 /* CardSizeGuessTests.m */; };
+		8524529B1977C45000DDECB3 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 8524529A1977C45000DDECB3 /* Deck.m */; };
+		8524529E1977C59C00DDECB3 /* PlayingCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 8524529D1977C59C00DDECB3 /* PlayingCardDeck.m */; };
+		852452A11977CE0400DDECB3 /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 852452A01977CE0400DDECB3 /* PlayingCard.m */; };
+		852452A41977D3BF00DDECB3 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 852452A31977D3BF00DDECB3 /* Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		852452851977C3A700DDECB3 /* CardSizeGuessTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CardSizeGuessTests-Info.plist"; sourceTree = "<group>"; };
 		852452871977C3A700DDECB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		852452891977C3A700DDECB3 /* CardSizeGuessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardSizeGuessTests.m; sourceTree = "<group>"; };
+		852452991977C45000DDECB3 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Deck.h; sourceTree = "<group>"; };
+		8524529A1977C45000DDECB3 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deck.m; sourceTree = "<group>"; };
+		8524529C1977C59C00DDECB3 /* PlayingCardDeck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCardDeck.h; sourceTree = "<group>"; };
+		8524529D1977C59C00DDECB3 /* PlayingCardDeck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCardDeck.m; sourceTree = "<group>"; };
+		8524529F1977CE0400DDECB3 /* PlayingCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayingCard.h; sourceTree = "<group>"; };
+		852452A01977CE0400DDECB3 /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
+		852452A21977D3BF00DDECB3 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		852452A31977D3BF00DDECB3 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +124,10 @@
 		852452641977C3A700DDECB3 /* CardSizeGuess */ = {
 			isa = PBXGroup;
 			children = (
-				8524526D1977C3A700DDECB3 /* AppDelegate.h */,
-				8524526E1977C3A700DDECB3 /* AppDelegate.m */,
-				852452701977C3A700DDECB3 /* Main.storyboard */,
-				852452731977C3A700DDECB3 /* ViewController.h */,
-				852452741977C3A700DDECB3 /* ViewController.m */,
+				852452931977C3C100DDECB3 /* View */,
+				852452941977C3C800DDECB3 /* Controller */,
 				852452761977C3A700DDECB3 /* Images.xcassets */,
+				852452981977C3EC00DDECB3 /* Model */,
 				852452651977C3A700DDECB3 /* Supporting Files */,
 			);
 			path = CardSizeGuess;
@@ -126,6 +136,8 @@
 		852452651977C3A700DDECB3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8524526D1977C3A700DDECB3 /* AppDelegate.h */,
+				8524526E1977C3A700DDECB3 /* AppDelegate.m */,
 				852452661977C3A700DDECB3 /* CardSizeGuess-Info.plist */,
 				852452671977C3A700DDECB3 /* InfoPlist.strings */,
 				8524526A1977C3A700DDECB3 /* main.m */,
@@ -150,6 +162,38 @@
 				852452861977C3A700DDECB3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		852452931977C3C100DDECB3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				852452701977C3A700DDECB3 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		852452941977C3C800DDECB3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				852452731977C3A700DDECB3 /* ViewController.h */,
+				852452741977C3A700DDECB3 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		852452981977C3EC00DDECB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8524529F1977CE0400DDECB3 /* PlayingCard.h */,
+				852452A01977CE0400DDECB3 /* PlayingCard.m */,
+				852452991977C45000DDECB3 /* Deck.h */,
+				8524529A1977C45000DDECB3 /* Deck.m */,
+				8524529C1977C59C00DDECB3 /* PlayingCardDeck.h */,
+				8524529D1977C59C00DDECB3 /* PlayingCardDeck.m */,
+				852452A21977D3BF00DDECB3 /* Game.h */,
+				852452A31977D3BF00DDECB3 /* Game.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8524529B1977C45000DDECB3 /* Deck.m in Sources */,
+				8524529E1977C59C00DDECB3 /* PlayingCardDeck.m in Sources */,
+				852452A11977CE0400DDECB3 /* PlayingCard.m in Sources */,
+				852452A41977D3BF00DDECB3 /* Game.m in Sources */,
 				852452751977C3A700DDECB3 /* ViewController.m in Sources */,
 				8524526F1977C3A700DDECB3 /* AppDelegate.m in Sources */,
 				8524526B1977C3A700DDECB3 /* main.m in Sources */,
@@ -456,6 +504,7 @@
 				8524528F1977C3A700DDECB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		852452901977C3A700DDECB3 /* Build configuration list for PBXNativeTarget "CardSizeGuessTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +513,7 @@
 				852452921977C3A700DDECB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
